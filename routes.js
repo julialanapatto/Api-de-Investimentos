@@ -2,6 +2,8 @@ const express = require('express');
 
 const router = express.Router();
 
-router.get('/');
+const accountController = require('./src/controllers/accountController')
+
+router.get('/contas', accountController.getAll);
 
 module.exports = router;
