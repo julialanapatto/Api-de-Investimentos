@@ -1,10 +1,10 @@
 const accountModel = require('../models/accountModel');
 
-async function getAll() {
+async function getAllAcounts() {
   const [account] = await accountModel.getAll();
   return account;
 }
 
 module.exports = {
-  getAll
+  getAllAcounts
 };
