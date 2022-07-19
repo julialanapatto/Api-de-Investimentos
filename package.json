@@ -1,0 +1,19 @@
+{
+  "name": "case-xp",
+  "version": "1.0.0",
+  "description": "case xp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/julialanapatto/case-xp.git"
+  },
+  "author": "Julia Lana Patto dos Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/julialanapatto/case-xp/issues"
+  },
+  "homepage": "https://github.com/julialanapatto/case-xp#readme"
+}
