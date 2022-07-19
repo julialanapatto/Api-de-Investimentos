@@ -11,8 +11,8 @@ async function getByAsset(cod_ativo) {
 }
 
 async function createPurchase (codCliente, codAtivo, qtdeAtivo) {
-  const [purchase] = await investmentsModel.createPurchase(codCliente, codAtivo, qtdeAtivo)
-  return {id: purchase.codCliente, codAtivo, qtdeAtivo}
+  await investmentsModel.createPurchase(codCliente, codAtivo, qtdeAtivo)
+  return {codCliente, codAtivo, qtdeAtivo}
 }
 
 async function createSale (codCliente, codAtivo, qtdeAtivo) {
