@@ -18,8 +18,14 @@ function createPurchase (codCliente, codAtivo, qtdeAtivo) {
  INSERT INTO investimentos.compras (cod_cliente, cod_ativo, qtde_ativo_comprado)VALUES (?, ?, ?)`, [codCliente, codAtivo, qtdeAtivo]);
 }
 
+function createSale (codCliente, codAtivo, qtdeAtivo) {
+  return connection.execute(`
+ INSERT INTO investimentos.vendas (cod_cliente, cod_ativo, qtde_ativo_vendido)VALUES (?, ?, ?)`, [codCliente, codAtivo, qtdeAtivo]);
+}
+
 module.exports = {
   getAllSales,
   getByAsset,
-  createPurchase
+  createPurchase,
+  createSale
 };

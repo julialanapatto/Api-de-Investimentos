@@ -29,9 +29,18 @@ async function createPurchase (req, res) {
 
     return res.status(201).json(data);
   }
+
+  async function createSale (req, res) {
+    const { codCliente, codAtivo, qtdeAtivo } = req.body;
+  
+    const data = await investmentsService.createSale(codCliente, codAtivo, qtdeAtivo);
+  
+    return res.status(201).json(data);
+  }
   
 module.exports = {
   getAllSales,
   getByAsset,
-  createPurchase
+  createPurchase,
+  createSale
 }

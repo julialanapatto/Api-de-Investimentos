@@ -14,5 +14,6 @@ router.get('/investimentos/compras', investmentsController.getAllSales)
 router.get('/assets/ativos/:cod_ativo', investmentsController.getByAsset);
 
 router.post('/investimentos/comprar', investmentsController.createPurchase);
+router.post('/investimentos/vender', investmentsController.createSale);
 
 module.exports = router;
