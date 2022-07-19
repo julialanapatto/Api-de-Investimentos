@@ -27,6 +27,10 @@ async function createPurchase (req, res) {
   
     const data = await investmentsService.createPurchase(codCliente, codAtivo, qtdeAtivo);
 
+    if (!data) {
+      return res.status(500).json({ message: 'Internal server error'});
+    }
+
     return res.status(201).json(data);
   }
 
@@ -34,6 +38,10 @@ async function createPurchase (req, res) {
     const { codCliente, codAtivo, qtdeAtivo } = req.body;
   
     const data = await investmentsService.createSale(codCliente, codAtivo, qtdeAtivo);
+
+    if (!data) {
+      return res.status(500).json({ message: 'Internal server error'});
+    }
   
     return res.status(201).json(data);
   }

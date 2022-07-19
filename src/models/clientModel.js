@@ -16,9 +16,7 @@ function getByClient(cod_cliente) {
   WHERE c.cod_cliente = ?`, [cod_cliente]);
 }
 
-
 module.exports = {
   getAllClients,
   getByClient
-
 };

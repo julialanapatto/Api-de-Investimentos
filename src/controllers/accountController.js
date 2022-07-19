@@ -46,9 +46,6 @@ async function createWithdraw (req, res) {
   return res.status(201).json(data);
 }
 
-
-
-
 module.exports = {
   getAllAcounts,
   getByAccount,
