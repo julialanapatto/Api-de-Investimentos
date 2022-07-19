@@ -6,6 +6,7 @@ const accountController = require('./src/controllers/accountController')
 const clientController = require('./src/controllers/clientController')
 
 router.get('/contas', accountController.getAllAcounts);
-router.get('/clientes', clientController.getAllClients)
+router.get('/clientes', clientController.getAllClients);
+router.get('/conta/:cod_cliente', accountController.getByAccount);
 
 module.exports = router;
