@@ -8,6 +8,6 @@ const clientController = require('./src/controllers/clientController')
 router.get('/contas', accountController.getAllAcounts);
 router.get('/clientes', clientController.getAllClients);
 router.get('/conta/:cod_cliente', accountController.getByAccount);
-router.get('/ativos/client/:cod_cliente', clientController.getByClient);
+router.get('/clientes/ativos/:cod_cliente', clientController.getByClient);
 
 module.exports = router;
