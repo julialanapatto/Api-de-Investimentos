@@ -15,8 +15,14 @@ async function createDeposit(codCliente, valor) {
   return {codCliente, valor};
 }
 
+async function createWithdraw (codCliente, valor) {
+  await accountModel.createWithdraw(codCliente, valor)
+  return {codCliente, valor};
+}
+
 module.exports = {
   getAllAcounts,
   getByAccount,
-  createDeposit
+  createDeposit,
+  createWithdraw
 };

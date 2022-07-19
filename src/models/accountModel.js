@@ -17,8 +17,14 @@ function createDeposit (codCliente, valor) {
  INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES (?, ?)`, [codCliente, valor]);
 }
 
+function createWithdraw (codCliente, valor) {
+  return connection.execute(`
+ INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES (?, ?)`, [codCliente, valor]);
+}
+
 module.exports = {
   getAllAcounts,
   getByAccount,
-  createDeposit
+  createDeposit,
+  createWithdraw
 };
