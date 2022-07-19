@@ -23,6 +23,7 @@ function createSale (codCliente, codAtivo, qtdeAtivo) {
  INSERT INTO investimentos.vendas (cod_cliente, cod_ativo, qtde_ativo_vendido)VALUES (?, ?, ?)`, [codCliente, codAtivo, qtdeAtivo]);
 }
 
+
 module.exports = {
   getAllSales,
   getByAsset,

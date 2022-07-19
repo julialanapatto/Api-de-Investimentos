@@ -16,8 +16,8 @@ async function createPurchase (codCliente, codAtivo, qtdeAtivo) {
 }
 
 async function createSale (codCliente, codAtivo, qtdeAtivo) {
-  const [sale] = await investmentsModel.createSale(codCliente, codAtivo, qtdeAtivo)
-  return {id: sale.codCliente, codAtivo, qtdeAtivo}
+  await investmentsModel.createSale(codCliente, codAtivo, qtdeAtivo)
+  return {codCliente, codAtivo, qtdeAtivo}
 }
 
 module.exports = {

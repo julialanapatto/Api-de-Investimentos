@@ -22,7 +22,20 @@ async function getByAccount(req, res) {
   return res.status(200).json(data)
 }
 
+async function createDeposit (req, res) {
+  const { codCliente, valor } = req.body;
+
+  const data = await accountService.createDeposit(codCliente, valor);
+
+  if (!data) {
+    return res.status(500).json({ message: 'Internal server error'});
+  }
+
+  return res.status(201).json(data);
+}
+
 module.exports = {
   getAllAcounts,
   getByAccount,
+  createDeposit
 };

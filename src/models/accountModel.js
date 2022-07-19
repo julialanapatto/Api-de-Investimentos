@@ -12,7 +12,13 @@ function getByAccount(cod_cliente) {
     [cod_cliente]);
 }
 
+function createDeposit (codCliente, valor) {
+  return connection.execute(`
+ INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES (?, ?)`, [codCliente, valor]);
+}
+
 module.exports = {
   getAllAcounts,
-  getByAccount
+  getByAccount,
+  createDeposit
 };
