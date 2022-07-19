@@ -22,8 +22,16 @@ async function getByAsset(req, res) {
   return res.status(200).json(data)
 }
 
+async function createPurchase (req, res) {
+  const { codCliente, codAtivo, qtdeAtivo } = req.body;
+  
+    const data = await investmentsService.createPurchase(codCliente, codAtivo, qtdeAtivo);
 
+    return res.status(201).json(data);
+  }
+  
 module.exports = {
   getAllSales,
-  getByAsset
+  getByAsset,
+  createPurchase
 }
