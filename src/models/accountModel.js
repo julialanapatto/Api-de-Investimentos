@@ -6,7 +6,7 @@ function getAllAcounts() {
 
 function getByAccount(cod_cliente) {
   return connection.execute(`
-    SELECT cod_cliente AS codCliente, saldo_conta AS Saldo FROM investimentos.conta
+    SELECT cod_cliente AS codCliente, saldo_conta AS saldo FROM investimentos.conta
     WHERE
       cod_cliente = ?`,
     [cod_cliente]);
