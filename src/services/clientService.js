@@ -10,7 +10,6 @@ async function getByClient(cod_cliente) {
   return client;
 }
 
-
 module.exports = {
   getAllClients,
   getByClient
