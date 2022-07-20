@@ -1,5 +1,15 @@
 const investmentsService = require('../services/investmentsService');
 
+async function getAllAssets(_req, res) {
+  const data = await investmentsService.getAllAssets();
+
+  if (!data) {
+    return res.status(500).json({ message: 'Internal server error'});
+  }
+
+  res.status(200).json(data);
+}
+
 async function getAllSales(_req, res) {
   const data = await investmentsService.getAllSales();
 
@@ -11,9 +21,9 @@ async function getAllSales(_req, res) {
 }
 
 async function getByAsset(req, res) {
-  const { cod_ativo } = req.params;
+  const { codAtivo } = req.params;
 
-  const data = await investmentsService.getByAsset(cod_ativo);
+  const data = await investmentsService.getByAsset(codAtivo);
 
   if (!data) {
     return res.status(500).json({ message: 'Internal server error'});
@@ -47,6 +57,7 @@ async function createPurchase (req, res) {
   }
   
 module.exports = {
+  getAllAssets,
   getAllSales,
   getByAsset,
   createPurchase,
