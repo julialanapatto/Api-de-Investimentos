@@ -11,9 +11,9 @@ async function getAllClients(_req, res) {
 }
 
 async function getByClient(req, res) {
-  const { cod_cliente } = req.params;
+  const { codCliente } = req.params;
 
-  const data = await clientService.getByClient(cod_cliente);
+  const data = await clientService.getByClient(codCliente);
 
   if (!data) {
     return res.status(500).json({ message: 'Internal server error'});

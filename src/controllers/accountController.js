@@ -11,9 +11,9 @@ async function getAllAcounts(_req, res) {
 }
 
 async function getByAccount(req, res) {
-  const { cod_cliente } = req.params;
+  const { codCliente } = req.params;
 
-  const data = await accountService.getByAccount(cod_cliente);
+  const data = await accountService.getByAccount(codCliente);
 
   if (!data) {
     return res.status(500).json({ message: 'Internal server error'});

@@ -4,7 +4,7 @@ function getAllClients() {
   return connection.execute('SELECT * FROM investimentos.clientes');
 }
 
-function getByClient(cod_cliente) {
+function getByClient(codCliente) {
   return connection.execute(`
   SELECT c.cod_cliente, 
   c.cod_ativo, 
@@ -13,7 +13,7 @@ function getByClient(cod_cliente) {
   FROM investimentos.acoes AS a
   INNER JOIN investimentos.compras AS c ON a.cod_ativo = c.cod_ativo
   INNER JOIN investimentos.vendas AS v ON a.cod_ativo = v.cod_ativo
-  WHERE c.cod_cliente = ?`, [cod_cliente]);
+  WHERE c.cod_cliente = ?`, [codCliente]);
 }
 
 module.exports = {

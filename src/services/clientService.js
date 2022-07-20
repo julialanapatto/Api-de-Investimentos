@@ -5,8 +5,8 @@ async function getAllClients () {
   return clients;
 }
 
-async function getByClient(cod_cliente) {
-  const [client] = await clientModel.getByClient(cod_cliente);
+async function getByClient(codCliente) {
+  const [client] = await clientModel.getByClient(codCliente);
   return client;
 }
 

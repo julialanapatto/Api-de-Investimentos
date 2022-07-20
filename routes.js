@@ -12,9 +12,9 @@ router.get('/contas', accountController.getAllAcounts);
 
 router.get('/clientes', clientController.getAllClients);
 
-router.get('/conta/:cod_cliente', accountController.getByAccount);
+router.get('/conta/:codCliente', accountController.getByAccount);
 
-router.get('/clientes/ativos/:cod_cliente', clientController.getByClient);
+router.get('/clientes/ativos/:codCliente', clientController.getByClient);
 
 router.get('/investimentos/compras', investmentsController.getAllSales)
 

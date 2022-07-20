@@ -5,8 +5,8 @@ async function getAllAcounts() {
   return accounts;
 }
 
-async function getByAccount(cod_cliente) {
-  const [account] = await accountModel.getByAccount(cod_cliente);
+async function getByAccount(codCliente) {
+  const [account] = await accountModel.getByAccount(codCliente);
   return account;
 }
 

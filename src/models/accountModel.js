@@ -4,12 +4,12 @@ function getAllAcounts() {
   return connection.execute('SELECT * FROM investimentos.conta');
 }
 
-function getByAccount(cod_cliente) {
+function getByAccount(codCliente) {
   return connection.execute(`
     SELECT cod_cliente AS codCliente, saldo_conta AS saldo FROM investimentos.conta
     WHERE
       cod_cliente = ?`,
-    [cod_cliente]);
+    [codCliente]);
 }
 
 function createDeposit (codCliente, valor) {
