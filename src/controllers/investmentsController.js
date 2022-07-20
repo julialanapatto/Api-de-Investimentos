@@ -39,7 +39,7 @@ async function getByAsset(req, res) {
     return res.status(500).json({ message: 'Internal server error'});
   }
 
-  return res.status(200).json(data)
+  return res.status(200).json(data);
 }
 
 async function createPurchase (req, res) {
