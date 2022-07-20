@@ -5,6 +5,11 @@ async function getAllAssets() {
   return sales;
 }
 
+async function getAllPurchases() {
+  const [sales] = await investmentsModel.getAllPurchases();
+  return sales;
+}
+
 async function getAllSales() {
   const [sales] = await investmentsModel.getAllSales();
   return sales;
@@ -27,6 +32,7 @@ async function createSale (codCliente, codAtivo, qtdeAtivo) {
 
 module.exports = {
   getAllAssets,
+  getAllPurchases,
   getAllSales,
   getByAsset,
   createPurchase,

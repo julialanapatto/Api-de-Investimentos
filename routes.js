@@ -16,7 +16,9 @@ router.get('/conta/:codCliente', accountController.getByAccount);
 
 router.get('/clientes/ativos/:codCliente', clientController.getByClient);
 
-router.get('/investimentos/compras', investmentsController.getAllSales)
+router.get('/investimentos/compras', investmentsController.getAllPurchases)
+
+router.get('/investimentos/vendas', investmentsController.getAllSales)
 
 router.get('/assets/ativos/:codAtivo', investmentsController.getByAsset);
 

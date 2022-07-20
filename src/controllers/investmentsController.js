@@ -10,6 +10,16 @@ async function getAllAssets(_req, res) {
   res.status(200).json(data);
 }
 
+async function getAllPurchases(_req, res) {
+  const data = await investmentsService.getAllPurchases();
+
+  if (!data) {
+    return res.status(500).json({ message: 'Internal server error'});
+  }
+
+  res.status(200).json(data);
+}
+
 async function getAllSales(_req, res) {
   const data = await investmentsService.getAllSales();
 
@@ -58,6 +68,7 @@ async function createPurchase (req, res) {
   
 module.exports = {
   getAllAssets,
+  getAllPurchases,
   getAllSales,
   getByAsset,
   createPurchase,
