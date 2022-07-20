@@ -7,7 +7,7 @@ async function getAllAcounts() {
 
 async function getByAccount(codCliente) {
   const [account] = await accountModel.getByAccount(codCliente);
-  return account;
+  return account[0];
 }
 
 async function createDeposit(codCliente, valor) {

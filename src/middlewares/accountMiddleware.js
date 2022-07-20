@@ -1,3 +1,5 @@
+const accountService = require('../services/accountService');
+
 const validateDeposit = async (req, res, next) => {
   const { valor } = req.body;
 
@@ -5,6 +7,18 @@ const validateDeposit = async (req, res, next) => {
   next()
 }
 
+const validateWithdraw = async (req, res, next) => {
+
+  const { codCliente, valor } = req.body; 
+
+  const balance = await accountService.getByAccount(codCliente)
+  
+  if (valor > balance.saldo) return res.status(505).json({ message: 'a quantidade a ser sacada não pode ser negativa e não pode ser igual a zero.' });
+
+   next()
+}
+
 module.exports = {
-  validateDeposit
+  validateDeposit,
+  validateWithdraw
 }
