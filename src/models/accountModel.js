@@ -14,12 +14,16 @@ function getByAccount(codCliente) {
 
 function createDeposit (codCliente, valor) {
   return connection.execute(`
- INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES (?, ?)`, [codCliente, valor]);
+  UPDATE investimentos.conta
+  SET saldo_conta = saldo_conta + ?
+  WHERE cod_cliente = ?;`, [valor, codCliente]);
 }
 
 function createWithdraw (codCliente, valor) {
   return connection.execute(`
- INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES (?, ?)`, [codCliente, valor]);
+  UPDATE investimentos.conta
+  SET saldo_conta = saldo_conta - ?
+  WHERE cod_cliente = ?;`, [valor, codCliente]);
 }
 
 module.exports = {
