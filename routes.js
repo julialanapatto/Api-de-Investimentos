@@ -42,6 +42,7 @@ const investmentsController = require('./src/controllers/investmentsController')
 
 const { validateDeposit, validateWithdraw } = require('./src/middlewares/accountMiddleware')
 const { validatePurchase } = require('./src/middlewares/investmentsMiddleware');
+const { validateSale } = require('./src/middlewares/investmentsMiddleware')
 const { validateLogin } = require('./src/middlewares/loginMiddleware');
 const loginController = require('./src/controllers/loginController');
 
@@ -64,7 +65,7 @@ router.post('/conta/saque', authenticateToken, validateWithdraw, accountControll
 
 router.get('/ativos/:codAtivo', authenticateToken, investmentsController.getByAsset);
 
-router.get('/ativos/clientes/:codCliente', clientController.getByClient);
+router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.getByClient);
 
 
 router.get('/ativos/compras', authenticateToken, investmentsController.getAllPurchases)
@@ -73,11 +74,11 @@ router.get('ativos/vendas', authenticateToken, investmentsController.getAllSales
 
 // investments
 
-router.get('/investimentos', investmentsController.getAllAssets) 
+router.get('/investimentos', investmentsController.getAllAssets)
 
 router.post('/investimentos/comprar', authenticateToken, validatePurchase, investmentsController.createPurchase);
 
-router.post('/investimentos/vender', authenticateToken, investmentsController.createSale);
+router.post('/investimentos/vender',authenticateToken, validateSale, investmentsController.createSale);
 
 
 
