@@ -6,7 +6,9 @@ USE investimentos;
 
 CREATE TABLE clientes (
     cod_cliente INT PRIMARY KEY NOT NULL auto_increment,
-    nome_cliente VARCHAR(30) NOT NULL
+    nome_cliente VARCHAR(30) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    senha VARCHAR(100) NOT NULL
     
 ) ENGINE=INNODB;
 
@@ -47,12 +49,12 @@ CREATE TABLE compras (
 ) ENGINE=INNODB;
 
 
-INSERT INTO investimentos.clientes (nome_cliente) VALUES
-    ("Julia"),
-    ("Lana"),
-    ("João"),
-    ("Pedro"),
-    ("Ana");
+INSERT INTO investimentos.clientes (nome_cliente, email, senha) VALUES
+    ("Julia", "juliaemail@gmail.com", "$3b111$D4bHgG3ATHy8e53pPqY48a91Yo.day/HP47qpPAASq0JpHPp8P0Al."),
+    ("Lana", "lanaemail@yahoo.com", "$2a$10$C3aGfh2ZRVf7d64jJgS36e90Gz.xxg/GkB8WwNFFSd0WeHhSX9Zb"),
+    ("João", "joaoemail@outlook.com", "$1y$53$C4bPqp1PW851q87JgS54890Gz.aat/IK90jJMqmahhaSX9Zb"),
+    ("Pedro", "pedroemail@gmail.com", "62a$10$C3aGfh2ZRVf7d64jJgS36e90Gz.ppg/GkB8WwNFFSd0WeHhSX9Zb"),
+    ("Ana", "anaemail@gmail.com", "$2a$10$b111$D4bHgG3AVf7d64j6e90Gz/GkFSd08554hSX9Zb"); 
 
 INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES
     (1, 44084.51),

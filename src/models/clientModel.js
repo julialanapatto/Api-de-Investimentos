@@ -17,7 +17,13 @@ function getByClient(codCliente) {
   WHERE c.cod_cliente = ?`, [codCliente]);
 }
 
+function getUser() {
+  return connection.execute(`
+  SELECT email, senha FROM investimentos.clientes `)
+}
+
 module.exports = {
+  getUser,
   getAllClients,
   getByClient
 };
