@@ -1,9 +1,5 @@
 const connection = require('./connection');
 
-function getAllAcounts() {
-  return connection.execute('SELECT * FROM investimentos.conta');
-}
-
 function getByAccount(codCliente) {
   return connection.execute(`
     SELECT cod_cliente AS codCliente, saldo_conta AS saldo FROM investimentos.conta
@@ -27,7 +23,6 @@ function createWithdraw (codCliente, valor) {
 }
 
 module.exports = {
-  getAllAcounts,
   getByAccount,
   createDeposit,
   createWithdraw

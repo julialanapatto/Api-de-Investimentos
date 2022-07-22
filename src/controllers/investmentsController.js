@@ -44,7 +44,7 @@ async function getByAsset(req, res) {
 
 async function createPurchase (req, res) {
   const { codCliente, codAtivo, qtdeAtivo } = req.body;
-  
+
     const data = await investmentsService.createPurchase(codCliente, codAtivo, qtdeAtivo);
 
     if (!data) {
@@ -56,16 +56,16 @@ async function createPurchase (req, res) {
 
   async function createSale (req, res) {
     const { codCliente, codAtivo, qtdeAtivo } = req.body;
-  
+
     const data = await investmentsService.createSale(codCliente, codAtivo, qtdeAtivo);
 
     if (!data) {
       return res.status(500).json({ message: 'Erro Interno do Servidor'});
     }
-  
+
     return res.status(201).json(data);
   }
-  
+
 module.exports = {
   getAllAssets,
   getAllPurchases,

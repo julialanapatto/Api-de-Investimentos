@@ -1,9 +1,5 @@
 const clientModel = require('../models/clientModel');
 
-async function getAllClients () {
-  const [clients] = await clientModel.getAllClients();
-  return clients;
-}
 
 async function getByClient(codCliente) {
   const [client] = await clientModel.getByClient(codCliente);
@@ -11,6 +7,5 @@ async function getByClient(codCliente) {
 }
 
 module.exports = {
-  getAllClients,
   getByClient
 };

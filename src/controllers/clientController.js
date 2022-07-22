@@ -1,15 +1,5 @@
 const clientService = require('../services/clientService');
 
-async function getAllClients(_req, res) {
-  const data = await clientService.getAllClients();
-
-  if (!data) {
-    return res.status(500).json({ message: 'Erro Interno do Servidor'});
-  }
-
-  res.status(200).json(data);
-}
-
 async function getByClient(req, res) {
   const { codCliente } = req.params;
 
@@ -23,6 +13,5 @@ async function getByClient(req, res) {
 }
 
 module.exports = {
-  getAllClients,
   getByClient
 };

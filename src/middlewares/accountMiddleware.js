@@ -21,7 +21,7 @@ const validateWithdraw = async (req, res, next) => {
   if(!valor) res.status(400).json({ message: 'Valor é obrigatório'})
 
   const balance = await accountService.getByAccount(codCliente);
-  
+
   if (valor > balance.saldo) return res.status(403).json({ message:'Saldo indisponível' });
 
    next()
