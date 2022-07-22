@@ -64,7 +64,7 @@ router.post('/conta/saque', authenticateToken, validateWithdraw, accountControll
 
 router.get('/ativos/:codAtivo', authenticateToken, investmentsController.getByAsset);
 
-router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.getByClient);
+router.get('/ativos/clientes/:codCliente', clientController.getByClient);
 
 
 router.get('/ativos/compras', authenticateToken, investmentsController.getAllPurchases)
@@ -73,7 +73,7 @@ router.get('ativos/vendas', authenticateToken, investmentsController.getAllSales
 
 // investments
 
-router.get('/investimentos', authenticateToken, investmentsController.getAllAssets)
+router.get('/investimentos', investmentsController.getAllAssets) 
 
 router.post('/investimentos/comprar', authenticateToken, validatePurchase, investmentsController.createPurchase);
 
