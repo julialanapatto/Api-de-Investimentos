@@ -2,23 +2,19 @@ const { generateToken } = require('../utils/token');
 
 const validateLogin = (req, res, next) => {
   const { email, senha } = req.body;
+  const validate = /^[\w+.]+@\w+.\w{2,}(?:.\w{2})?$/i;
 
   if (!email || !senha) {
 return res.status(400)
-  .json({ message: 'Alguns campos obrigatórios estão faltando' }); 
+  .json({ message: 'e-mail e senha são campos obrigatórios' }); 
 }
+
+if (!validate.test(email)) {
+  return res.status(400)
+     .json({ message: '"e-mail" deve ser um e-mail válido' }); 
+ }
+
   next();
-};
-
-const validateEmail = (req, res, next) => {
-  const { email } = req.body;
-  const validate = /\S+@\S+\.\S+/;
-
-  if (!validate.test(email)) {
-      return res.status(400)
-         .json({ message: '"e-mail" deve ser um e-mail válido' }); 
-     }
-         next();
 };
 
 const authenticateToken = (req, res, next) => {
@@ -36,4 +32,4 @@ const authenticateToken = (req, res, next) => {
   next();
 };
 
-module.exports = {validateEmail, validateLogin, authenticateToken };
+module.exports = {validateLogin, authenticateToken };
