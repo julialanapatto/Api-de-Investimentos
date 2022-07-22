@@ -21,17 +21,17 @@ const validatePurchase = async (req, res, next) => {
 const validateSale = async (req, res, next) => {
   const {codCliente, codAtivo, qtdeAtivo } = req.body;
 
+
   if (!codCliente) return res.status(400).json({ message: 'Código do cliente é obrigatório' });
 
   if(!codAtivo)  return res.status(400).json({ message: 'Código do ativo é obrigatório' });
 
   if(!qtdeAtivo) return res.status(400).json({ message: 'A quantidade do ativo é obrigatória' });
 
-  const availableAssets = await clientService.getByClient(qtdeAtivo);
+  const available = await clientService.getByClient(codCliente)
+  const [validAmount] = available.filter((a) => a.codAtivo === codAtivo)
 
-  console.log(availableAssets)
-
-/*   if (qtdeAtivo > availableAssets.qtdeAtivo) return res.status(403).json({ message: 'Quantidade indisponível' }); */
+  if (qtdeAtivo > validAmount.qtdeAtivo) return res.status(403).json({ message: 'Quantidade indisponível para venda' });
    next();
 
 }
