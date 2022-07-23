@@ -5,11 +5,11 @@ function getAllAssets() {
 }
 
 function getAllPurchases() {
-  return connection.execute('SELECT * FROM investimentos.compras');
+  return connection.execute('SELECT id_compra AS id, cod_cliente AS codCliente, cod_ativo AS codAtivo, qtde_ativo_comprado AS qtdeComprada FROM investimentos.compras');
 }
 
 function getAllSales() {
-  return connection.execute('SELECT * FROM investimentos.vendas');
+  return connection.execute('SELECT id_ AS id, cod_cliente AS codCliente, cod_ativo AS codAtivo, qtde_ativo_vendido AS qtdeVendida FROM investimentos.vendas');
 }
 
 function getByAsset(codAtivo) {

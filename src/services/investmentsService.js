@@ -1,18 +1,18 @@
 const investmentsModel = require('../models/investmentsModel');
 
 async function getAllAssets() {
-  const [sales] = await investmentsModel.getAllAssets();
-  return sales;
+  const [assets] = await investmentsModel.getAllAssets();
+  return assets;
 }
 
 async function getAllPurchases() {
-  const [sales] = await investmentsModel.getAllPurchases();
-  return sales;
+  const [purchase] = await investmentsModel.getAllPurchases();
+  return purchase;
 }
 
 async function getAllSales() {
-  const [sales] = await investmentsModel.getAllSales();
-  return sales;
+  const [sale] = await investmentsModel.getAllSales();
+  return sale;
 }
 
 async function getByAsset(codAtivo) {
