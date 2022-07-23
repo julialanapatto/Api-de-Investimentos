@@ -23,21 +23,15 @@ const jwtConfig = {
 };
 
 const SECRET = process.env.JWT_SECRET;
-
-
 const authenticateToken = async (req, res, next) => {
-  const token = req.headers.authorization;
 
-/* const auth = req.heades.authorization;
+const auth = req.headers.authorization;
+
 const [, token] = auth.split(' ');
 
 if(!token) {
   return res.status(401).json({ message: 'Token expirado ou inválido' })
-} */ // autenticação ensinada para o swagger
-
-  if (!token) {
-    return res.status(401).json({ message: 'Token não encontrado' });
-  }
+}
 
   try {
     jwt.verify(token, SECRET, jwtConfig);
