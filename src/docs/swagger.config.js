@@ -7,7 +7,7 @@ const swaggerConfig = {
       version: "1.0"
     },
     servers: [{
-      url: "https://casexpinvestimentos.herokuapp.com/docs/",
+      url: "https://casexpinvestimentos.herokuapp.com",
       description: "heroku application"
     }],
     components: {
