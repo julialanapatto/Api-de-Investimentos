@@ -7,8 +7,8 @@ const swaggerConfig = {
       version: "1.0"
     },
     servers: [{
-      url: "http://localhost:3000",
-      description: "servidor local"
+      url: "https://casexpinvestimentos.herokuapp.com/docs/",
+      description: "heroku application"
     }],
     components: {
       securitySchemes: {
