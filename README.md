@@ -67,23 +67,23 @@ Requisições para a API seguem os padrões:
 
 ```npm run dev```
 
-+ ESLINT
+## ESLINT
 
 ```npm run lint```
 
-(você também pode instalar o plugin do ESLint no VSCode.)
+(você também pode instalar o plugin do ESLint no VSCode)
 
-+ TEST
+## TEST
 
 ```npm run lint```
 
-+ DEPENDÊNCIAS
+## DEPENDÊNCIAS
 
 Este projeto já vem com as dependências configuradas nos arquivos package.json nos seguintes caminhos:
 
 ```case-xp/package.json```
 
-+ Explicação sobre tomadas de decisão na abordagem do desafio
+## Explicação sobre tomadas de decisão na abordagem do desafio
 
 A abordagem escolhida para o desenvolvimento do desafio foi utilizar os conhecimentos adquiridos e consolidados no curso da Trybe. 
 
@@ -101,5 +101,6 @@ Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticaç
 
 ## Documentação
 
-A documentação da API pode ser acessada pela url: [https://casexpinvestimentos.herokuapp.com]
+A documentação da API pode ser acessada pela url: 
+[Documentação case xp](https://casexpinvestimentos.herokuapp.com)
 
