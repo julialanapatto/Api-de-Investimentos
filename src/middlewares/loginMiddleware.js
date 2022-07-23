@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+/* const jwt = require('jsonwebtoken'); */
 
 const validateLogin = (req, res, next) => {
   const { email, senha } = req.body;
@@ -6,7 +6,7 @@ const validateLogin = (req, res, next) => {
 
   if (!email || !senha) {
 return res.status(400)
-  .json({ message: 'e-mail e senha são campos obrigatórios' }); 
+  .json({ message: 'e-mail e senha são campos obrigatórios' });
 }
 
 if (!validate.test(email)) {
@@ -17,27 +17,33 @@ if (!validate.test(email)) {
   next();
 };
 
-const jwtConfig = {
+/* const jwtConfig = {
   expiresIn: '7d',
   algorithm: 'HS256',
 };
 
 const SECRET = process.env.JWT_SECRET;
-
+ */
 
 const authenticateToken = async (req, res, next) => {
-  const token = req.headers.authorization;
+  const auth = req.headers.authorization;
 
 
-  if (!token) {
+  if (!auth) {
     return res.status(401).json({ message: 'Token não encontrado' });
   }
 
-  try {
+  const [, token] = auth.split(' ');
+
+  if(!token) {
+    return res.status(401).json({ message: 'Token expirado ou inválido' })
+  }
+
+/*   try {
     jwt.verify(token, SECRET, jwtConfig);
   } catch (e) {
     return res.status(401).json({ message: 'Token expirado ou inválido' });
-  }
+  } */
 
   next();
 };

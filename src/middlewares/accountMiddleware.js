@@ -14,7 +14,7 @@ const validateDeposit = async (req, res, next) => {
 
 const validateWithdraw = async (req, res, next) => {
 
-  const { codCliente, valor } = req.body; 
+  const { codCliente, valor } = req.body;
 
   if(!codCliente) res.status(400).json({ message: 'Código do cliente é obrigatório' })
 

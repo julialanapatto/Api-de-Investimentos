@@ -43,7 +43,7 @@ CREATE TABLE compras (
     cod_cliente INT NOT NULL,
     cod_ativo INT NOT NULL,
     qtde_ativo_comprado INT NOT NULL,
-    
+
     FOREIGN KEY(cod_cliente) REFERENCES clientes (cod_cliente),
     FOREIGN KEY(cod_ativo) REFERENCES acoes (cod_ativo)
 ) ENGINE=INNODB;
@@ -62,7 +62,7 @@ INSERT INTO investimentos.conta (cod_cliente, saldo_conta) VALUES
     (3, 5581.58),
     (4, 4528.70),
     (5, 6228.50);
-    
+
     INSERT INTO investimentos.acoes (trade_name, ticker, valor_acao, qtde_ativo) VALUES
     ("BRASKEM PNA", "BRKM5", 34.78, 10000),
     ("ELETROBRAS ON", "ELET3", 44.05, 20000),
