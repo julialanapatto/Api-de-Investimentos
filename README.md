@@ -51,45 +51,45 @@ Requisições para a API seguem os padrões:
 
 ## Instalação
 
-+ Clone o projeto para sua máquina
+1.Clone o projeto para sua máquina
 
-    ```git clone git@github.com:julialanapatto/case-xp.git```
+```git clone git@github.com:julialanapatto/case-xp.git```
 
-+ Entre na pasta do repositório que você acabou de clonar
+2.Entre na pasta do repositório que você acabou de clonar
 
-    ```cd case-xp```
+```cd case-xp```
 
-+ Instale as dependencias
+3.Instale as dependencias
 
 ```npm install```
 
-+ Execute a aplicação
+4.Execute a aplicação
 
 ```npm run dev```
 
-## ESLINT
+## Eslint
 
 ```npm run lint```
 
 (você também pode instalar o plugin do ESLint no VSCode)
 
-## TEST
+## Testes
 
-```npm run lint```
+```npm test```
 
-## DEPENDÊNCIAS
+## Dependências
 
-Este projeto já vem com as dependências configuradas nos arquivos package.json nos seguintes caminhos:
+Este projeto já vem com as dependências configuradas nos arquivos package.json no seguinte caminho:
 
 ```case-xp/package.json```
 
 ## Explicação sobre tomadas de decisão na abordagem do desafio
 
-A abordagem escolhida para o desenvolvimento do desafio foi utilizar os conhecimentos adquiridos e consolidados no curso da Trybe. 
+A abordagem escolhida para o desenvolvimento do desafio foi utilizar os conhecimentos adquiridos e consolidados no curso da Trybe.
 
 Escolhi o Node.js com express devido a um maior domínio da linguagem JavaScript e tempo disponível para a realização do desafio (em um segundo momento pretendo retornar e refatorar utilizando alguns conceitos recém aprendidos - veja aqui em Melhorias possíveis).
 
- A escolha da utlização do MySQL sem o uso de ORM (Mapeamento objeto-relacional) foi para retomar conhecimentos e praticar querys em banco de dados com o MySQL puro.
+A escolha da utlização do MySQL sem o uso de ORM (Mapeamento objeto-relacional) foi para retomar conhecimentos e praticar querys em banco de dados com o MySQL puro.
 
 Com relação a API e informações sobre o banco de dados decidi criar uma API minúscula para simular informações e desenvolver algo novo, retornando informações que são fixas mas ao mesmo tempo me ajudando na compreensão dos retornos.
 
@@ -101,6 +101,9 @@ Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticaç
 
 ## Documentação
 
-A documentação da API pode ser acessada pela url: 
-[Documentação case xp](https://casexpinvestimentos.herokuapp.com)
+A documentação da API pode ser acessada pela url:
+[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com)
 
+## Autenticação e autorização  [POST]
+
+Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
