@@ -72,3 +72,34 @@ Requisições para a API seguem os padrões:
 ```npm run lint```
 
 (você também pode instalar o plugin do ESLint no VSCode.)
+
++ TEST
+
+```npm run lint```
+
++ DEPENDÊNCIAS
+
+Este projeto já vem com as dependências configuradas nos arquivos package.json nos seguintes caminhos:
+
+```case-xp/package.json```
+
++ Explicação sobre tomadas de decisão na abordagem do desafio
+
+A abordagem escolhida para o desenvolvimento do desafio foi utilizar os conhecimentos adquiridos e consolidados no curso da Trybe. 
+
+Escolhi o Node.js com express devido a um maior domínio da linguagem JavaScript e tempo disponível para a realização do desafio (em um segundo momento pretendo retornar e refatorar utilizando alguns conceitos recém aprendidos - veja aqui em Melhorias possíveis).
+
+ A escolha da utlização do MySQL sem o uso de ORM (Mapeamento objeto-relacional) foi para retomar conhecimentos e praticar querys em banco de dados com o MySQL puro.
+
+Com relação a API e informações sobre o banco de dados decidi criar uma API minúscula para simular informações e desenvolver algo novo, retornando informações que são fixas mas ao mesmo tempo me ajudando na compreensão dos retornos.
+
+O relacionamento entre as tabelas foi elaborado considerando a usabilidade do usuário, informações necessárias para registro de informações e normativas
+
+Os endpoints foram elaborados na arquitetura MSC com as camadas de Modelo, Serviço, Controladores e as validações por Middlewares do Express.
+
+Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticação e autorização do JWT pata controlar o acesso e oferecer mais segurança ao endpoint, o Swagger para documentar a API e explorar uma ferramenta que nunca havia utilizado, o deploy da API e realização de uma rota de testes unitários.
+
+## Documentação
+
+A documentação da API pode ser acessada pela url: [https://casexpinvestimentos.herokuapp.com]
+
