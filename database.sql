@@ -9,14 +9,14 @@ CREATE TABLE clientes (
     nome_cliente VARCHAR(30) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(100) NOT NULL
-
+a
 ) ENGINE=INNODB;
 
 CREATE TABLE acoes (
     cod_ativo INT PRIMARY KEY NOT NULL auto_increment,
     trade_name VARCHAR(30) NOT NULL,
     ticker VARCHAR(6) NOT NULL,
-    valor_acao INT NOT NULL,
+    valor_acao DECIMAL(12,2) NOT NULL
     qtde_ativo INT NOT NULL
 ) ENGINE=INNODB;
 
