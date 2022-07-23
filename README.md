@@ -53,5 +53,5 @@ Requisições para a API seguem os padrões:
 
 + Clone o projeto para sua máquina
 
-    + git clone git@github.com:julialanapatto/case-xp.git
+    ```git clone git@github.com:julialanapatto/case-xp.git```
 
