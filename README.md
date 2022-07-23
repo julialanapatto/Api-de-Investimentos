@@ -1,4 +1,4 @@
-# case-xp
+# case-xp API
 Desafio do processo seletivo - turma xp
 
 ## Projeto desafio XPInc
@@ -55,3 +55,20 @@ Requisições para a API seguem os padrões:
 
     ```git clone git@github.com:julialanapatto/case-xp.git```
 
++ Entre na pasta do repositório que você acabou de clonar
+
+    ```cd case-xp```
+
++ Instale as dependencias
+
+```npm install```
+
++ Execute a aplicação
+
+```npm run dev```
+
++ ESLINT
+
+```npm run lint```
+
+(você também pode instalar o plugin do ESLint no VSCode.)
