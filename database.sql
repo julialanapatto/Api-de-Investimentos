@@ -9,7 +9,7 @@ CREATE TABLE clientes (
     nome_cliente VARCHAR(30) NOT NULL,
     email VARCHAR(100) NOT NULL,
     senha VARCHAR(100) NOT NULL
-    
+
 ) ENGINE=INNODB;
 
 CREATE TABLE acoes (
