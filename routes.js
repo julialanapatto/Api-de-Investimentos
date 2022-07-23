@@ -436,7 +436,7 @@ router.get('investimentos/vendas', authenticateToken, investmentsController.getA
   *          - ativo
   *          - tiker
   *          - valor
-  *          - qtdeAtivo
+  *          - qtdeAtivoMax
   *          - qtdeInvestida
   *        properties:
   *          codAtivo:
@@ -447,7 +447,7 @@ router.get('investimentos/vendas', authenticateToken, investmentsController.getA
   *            type: string
   *          valor:
   *            type: decimal(12,2)
-  *          qtdeAtivo:
+  *          qtdeAtivoMax:
   *            type:integer
   *          qtdeInvestida: string
   *        example:
@@ -455,6 +455,7 @@ router.get('investimentos/vendas', authenticateToken, investmentsController.getA
   *          acao: "ELETROBRAS ON"
   *          tiker: "ELET3"
   *          valor: 44
+  *          qtdeAtivoMax: 10000
   *          qtdeAtivo: 20000
   *          qtdeInvestida: "59"
   */

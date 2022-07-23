@@ -1,7 +1,7 @@
 const connection = require('./connection');
 
 function getAllAssets() {
-  return connection.execute('SELECT c.cod_cliente AS codCliente,c.cod_ativo AS codAtivo, acoes.trade_name AS ativo, acoes.ticker AS ticker, acoes.valor_acao AS valor, acoes.qtde_ativo AS qtdeAtivoDisp, c.soma - v.soma AS qtdeInvestida FROM (SELECT SUM(compras.qtde_ativo_comprado) AS soma, compras.cod_ativo, compras.cod_cliente FROM compras GROUP BY compras.cod_ativo, compras.cod_cliente) AS c INNER JOIN (SELECT SUM(vendas.qtde_ativo_vendido) AS soma, vendas.cod_ativo, vendas.cod_cliente FROM vendas GROUP BY vendas.cod_ativo, vendas.cod_cliente) AS v ON (v.cod_ativo = c.cod_ativo and v.cod_cliente = c.cod_cliente)INNER JOIN acoes ON (acoes.cod_ativo = c.cod_ativo);');
+  return connection.execute('SELECT c.cod_cliente AS codCliente,c.cod_ativo AS codAtivo, acoes.trade_name AS ativo, acoes.ticker AS ticker, acoes.valor_acao AS valor, acoes.qtde_ativo AS qtdeAtivoMax, c.soma - v.soma AS qtdeInvestida FROM (SELECT SUM(compras.qtde_ativo_comprado) AS soma, compras.cod_ativo, compras.cod_cliente FROM compras GROUP BY compras.cod_ativo, compras.cod_cliente) AS c INNER JOIN (SELECT SUM(vendas.qtde_ativo_vendido) AS soma, vendas.cod_ativo, vendas.cod_cliente FROM vendas GROUP BY vendas.cod_ativo, vendas.cod_cliente) AS v ON (v.cod_ativo = c.cod_ativo and v.cod_cliente = c.cod_cliente)INNER JOIN acoes ON (acoes.cod_ativo = c.cod_ativo);');
 }
 
 function getAllPurchases() {
