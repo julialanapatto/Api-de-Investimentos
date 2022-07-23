@@ -7,7 +7,7 @@ const validateDeposit = async (req, res, next) => {
 
   if(!valor) res.status(400).json({ message: 'Valor é obrigatório' })
 
-  if (valor <= 0) res.status(403).json({ message: 'A quantidade a ser depositada é inválida' })
+  if (valor <= 0) res.status(400).json({ message: 'A quantidade a ser depositada é inválida' })
 
   next()
 }
@@ -22,7 +22,7 @@ const validateWithdraw = async (req, res, next) => {
 
   const balance = await accountService.getByAccount(codCliente);
 
-  if (valor > balance.saldo) return res.status(403).json({ message:'Saldo indisponível' });
+  if (valor > balance.saldo) return res.status(400).json({ message:'Saldo indisponível' });
 
    next()
 }
