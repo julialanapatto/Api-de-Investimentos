@@ -3,7 +3,7 @@ const swaggerConfig = {
     openapi: "3.0.1",
     info: {
       title: "Investimentos API",
-      description: "Api simples, simulando transações bancárias e investimentos, utilizando express documentada pelo swagger",
+      description: "Api simples, simulando transações bancárias e investimentos",
       version: "1.0"
     },
     servers: [{

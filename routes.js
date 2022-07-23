@@ -35,8 +35,8 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *          senha:
   *            type: string
   *        example:
-  *          email: seuemail@email.com
-  *          senha: bGlhZW1haWxAZ21haWwuY29tIiwiaWF0IjoxNjU4NTMwNTMyLCJleHAiOjE2NTkw
+  *          email: juliaemail@gmail.com
+  *          senha: $3b111$D4bHgG3ATHy8e53pPqY48a91Yo.day/HP47qpPAASq0JpHPp8P0Al.
   */
  /**
   * @swagger
@@ -44,8 +44,15 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *    post:
   *      tags: [Login]
   *      description: Endpoint permite o login do usuário e autenticação
+  *      requestBody:
+  *        required: true
+  *        content:
+  *          application/json:
+  *            schema:
+  *              type: object
+  *              $ref: '#/components/schemas/Login'
   *      responses:
-  *        200:
+  *        201:
   *          content:
   *            application/json:
   *              schema:
@@ -312,7 +319,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
 /**
  * @swagger
  *  tags:
- *    name: Registro de compras de ativos
+ *    name:  Extrato Compra
  *    description: Endpoint que registra todas as compras de ativos
  */
 /**
@@ -363,7 +370,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
 /**
  * @swagger
  *  tags:
- *    name: Registro de vendas de ativos
+ *    name: Extrato Venda
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
@@ -396,7 +403,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   * @swagger
   *  /investimentos/vendas:
   *    get:
-  *      tags: [Extrato Vendas]
+  *      tags: [Extrato Venda]
   *      description: Endpoint que registra todas as vendas de ativos
   *      security:
   *        - bearerAuth: []
@@ -532,7 +539,7 @@ router.post('/investimentos/comprar', authenticateToken, validatePurchase, inves
  * @swagger
   *  components:
   *    schemas:
-  *      Saque:
+  *      Vendas:
   *        type: object
   *        required:
   *          - codCliente
