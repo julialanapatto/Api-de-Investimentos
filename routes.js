@@ -27,9 +27,12 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *      Login:
   *        type: object
   *        required:
-  *          - token
+  *          - email
+  *          - senha
   *        properties:
-  *          token:
+  *          email:
+  *            type: string
+  *          senha:
   *            type: string
   *        example:
   *          token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJub21lIjoiUm9iZXJ0byIsInNvYnJlbm9tZSI6IlNvdXNhIiwiZW1haWwiOiJyb2JlcnRvc291c2FAZ21haWwuY29tIiwiaWF0IjoxNjU4NTIxNTYwLCJleHAiOjE2NTkxMjYzNjB9. 0tdUYr5wbV6Oo3jUGCmDGd-EO4ZYCGE1tH9d_-vjTEk"
@@ -48,7 +51,7 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *              type: object
   *              $ref: '#/components/schemas/Login'
   *      responses:
-  *        201:
+  *        200:
   *          content:
   *            application/json:
   *              schema:
