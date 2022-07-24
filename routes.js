@@ -369,7 +369,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *          codAtivo: 2
   *          acao: "ELETROBRAS ON"
   *          tiker: "ELET3"
-  *          valor: 44
+  *          valor: "44.05"
   *          qtdeAtivoMax: 10000
   *          qtdeAtivo: 20000
   *          qtdeInvestida: "59"
