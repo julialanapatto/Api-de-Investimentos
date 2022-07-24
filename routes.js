@@ -437,11 +437,11 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   */
 router.get('/investimentos/compras', authenticateToken, investmentsController.getAllPurchases)
 
-// Swagger Transações Venda de ativos
+// Swagger Transações compra de ativos
 /**
  * @swagger
  *  tags:
- *    name:  Extrato Venda
+ *    name:  Extrato Vendaa
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
