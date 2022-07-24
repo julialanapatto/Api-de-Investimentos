@@ -21,7 +21,6 @@ const validatePurchase = async (req, res, next) => {
 const validateSale = async (req, res, next) => {
   const {codCliente, codAtivo, qtdeAtivo } = req.body;
 
-
   if (!codCliente) return res.status(400).json({ message: 'Código do cliente é obrigatório' });
 
   if(!codAtivo)  return res.status(400).json({ message: 'Código do ativo é obrigatório' });
