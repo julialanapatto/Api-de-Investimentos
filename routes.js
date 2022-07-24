@@ -396,7 +396,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
  * @swagger
  *  tags:
  *    name:  Extrato Compra
- *    description: Endpoint que registra todas as compras de ativos
+ *    description: Endpoint que registra todas as compras de ativos.
  */
 /**
  * @swagger
