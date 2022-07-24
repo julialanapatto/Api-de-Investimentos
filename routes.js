@@ -245,7 +245,7 @@ router.post('/conta/saque', authenticateToken, validateWithdraw, accountControll
   *            type: integer
   *          qtdeAtivo:
   *            type: integer
-  *          valor: decimal(12,2)
+  *          valor: string
   *        example:
   *          codAtivo: 1
   *          qtdeAtivo: 100
