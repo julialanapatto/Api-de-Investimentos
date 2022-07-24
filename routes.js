@@ -121,7 +121,7 @@ router.post('/login', validateLogin, loginController.login)
   *                type: object
   *                $ref: '#/components/schemas/Conta'
   */
-router.get('/conta/:codCliente', authenticateToken, accountController.getByAccount);
+router.get('/conta/:codCliente', accountController.getByAccount);
 
 // Swagger Deposit
 /**
