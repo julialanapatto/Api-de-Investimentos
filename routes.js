@@ -445,14 +445,14 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
 /**
  * @swagger
  *  tags:
- *    name: Extrato
+ *    name: Extrato Venda
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
  * @swagger
   *  components:
   *    schemas:
-  *      Extrato:
+  *      ExtratoVenda:
   *        type: object
   *        required:
   *          - id
@@ -478,7 +478,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   * @swagger
   *  /investimentos/vendas:
   *    get:
-  *      tags: [Extrato]
+  *      tags: [Extrato Venda]
   *      description: Endpoint que registra todas as vendas de ativos
   *      security:
   *        - bearerAuth: []
@@ -488,7 +488,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   *            application/json:
   *              schema:
   *                type: object
-  *                $ref: '#/components/schemas/Extrato'
+  *                $ref: '#/components/schemas/ExtratoVenda'
   */
 router.get('/investimentos/vendas', authenticateToken, investmentsController.getAllSales)
 
