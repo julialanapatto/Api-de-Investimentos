@@ -121,7 +121,7 @@ router.post('/login', validateLogin, loginController.login)
   *                type: object
   *                $ref: '#/components/schemas/Conta'
   */
-router.get('/conta/:codCliente', accountController.getByAccount);
+router.get('/conta/:codCliente', authenticateToken, accountController.getByAccount);
 
 // Swagger Deposit
 /**
@@ -384,7 +384,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *                type: object
   *                $ref: '#/components/schemas/Investimentos'
   */
-   router.get('/investimentos', authenticateToken, investmentsController.getAllAssets)
+   router.get('/investimentos', investmentsController.getAllAssets)
 
 // Swagger Transações compra de ativos
 /**
