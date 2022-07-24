@@ -35,7 +35,8 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *          senha:
   *            type: string
   *        example:
-  *          token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJub21lIjoiUm9iZXJ0byIsInNvYnJlbm9tZSI6IlNvdXNhIiwiZW1haWwiOiJyb2JlcnRvc291c2FAZ21haWwuY29tIiwiaWF0IjoxNjU4NTIxNTYwLCJleHAiOjE2NTkxMjYzNjB9. 0tdUYr5wbV6Oo3jUGCmDGd-EO4ZYCGE1tH9d_-vjTEk"
+  *          email: juliaemail@gmail.com
+  *          senha: $3b111$D4bHgG3ATHy8e53pPqY48a91Yo.day/HP47qpPAASq0JpHPp8P0Al.
   */
  /**
   * @swagger
@@ -53,10 +54,7 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *      responses:
   *        200:
   *          content:
-  *            application/json:
-  *              schema:
-  *                type: object
-  *                $ref: '#/components/schemas/Login'
+  *            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJub21lIjoiUm9iZXJ0byIsInNvYnJlbm9tZSI6IlNvdXNhIiwiZW1haWwiOiJyb2JlcnRvc291c2FAZ21haWwuY29tIiwiaWF0IjoxNjU4NTIxNTYwLCJleHAiOjE2NTkxMjYzNjB9. 0tdUYr5wbV6Oo3jUGCmDGd-EO4ZYCGE1tH9d_-vjTEk"
   */
 router.post('/login', validateLogin, loginController.login)
 
