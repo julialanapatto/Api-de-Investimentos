@@ -178,7 +178,7 @@ router.post('/conta/deposito', authenticateToken, validateDeposit, accountContro
  * @swagger
  *  tags:
  *    name: Saque
- *    description: Endpoint de conta bancária - saque
+ *    description: Endpoint de conta bancária - Saque
  */
 /**
  * @swagger
@@ -380,11 +380,11 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   */
 router.get('/investimentos/compras', authenticateToken, investmentsController.getAllPurchases)
 
-// Swagger Transações vendas de ativos
+// Swagger Transações Venda de ativos
 /**
  * @swagger
  *  tags:
- *    name: ExtratoVenda
+ *    name:  Extrato Venda
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
@@ -417,7 +417,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   * @swagger
   *  /investimentos/vendas:
   *    get:
-  *      tags: [ExtratoVenda]
+  *      tags: [Extrato Venda]
   *      description: Endpoint que registra todas as vendas de ativos
   *      security:
   *        - bearerAuth: []
@@ -500,7 +500,7 @@ router.get('/investimentos', investmentsController.getAllAssets)
  * @swagger
   *  components:
   *    schemas:
-  *      Saque:
+  *      Compras:
   *        type: object
   *        required:
   *          - codCliente
