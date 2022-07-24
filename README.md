@@ -176,8 +176,8 @@ Obrigada por terem me acompanhado até aqui, gostei muito do processo de desenvo
 
 Entre em contato comigo:
 
-## *Linkedin: [https://linkedin.com/in/julialanapatto](https://www.linkedin.com/in/julialanapatto/)*
+**Linkedin: [https://linkedin.com/in/julialanapatto](https://www.linkedin.com/in/julialanapatto/)**
 
-## *Github: [https://github.com/julialanapatto](https://github.com/julialanapatto)*
+**Github: [https://github.com/julialanapatto](https://github.com/julialanapatto)**
 
-## *Email: julialanapatto@gmail.com*
+**Email: julialanapatto@gmail.com**
