@@ -125,7 +125,7 @@ Todos os endpoints e retornos estão descritas na documentação da API e pode s
 Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
 Para isso é necessário seguir os seguintes passos na documentação da API.
 
-1. Abrir a documentação **[Documentação Swagger](https://casexpinvestimentos.herokuapp.com)**
+1. Abrir a documentação **[Documentação Swagger](https://casexpinvestimentos.herokuapp.com/docs)**
 
 2. Selecionar em servers
 
