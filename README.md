@@ -87,7 +87,7 @@ Este projeto já vem com as dependências configuradas nos arquivos package.js
 
 A abordagem escolhida para o desenvolvimento do desafio foi utilizar os conhecimentos adquiridos e consolidados no curso da Trybe.
 
-Escolhi o Node.js com express devido a um maior domínio da linguagem JavaScript e tempo disponível para a realização do desafio (em um segundo momento pretendo retornar e refatorar utilizando alguns conceitos recém aprendidos - veja aqui em Melhorias possíveis).
+Escolhi o Node.js com express devido a um maior domínio da linguagem JavaScript e tempo disponível para a realização do desafio (em um segundo momento pretendo retornar e refatorar utilizando alguns conceitos recém aprendidos - veja [aqui](#melhorias-possíveis) melhorias possíveis).
 
 A escolha da utlização do MySQL sem o uso de ORM (Mapeamento objeto-relacional) foi para retomar conhecimentos e praticar querys em banco de dados com o MySQL puro.
 
@@ -107,3 +107,55 @@ A documentação da API pode ser acessada pela url:
 ## Autenticação e autorização  [POST]
 
 Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
+Para isso é necessário seguir os seguintes passos na documentação da API.
+
+1. Abrir a documentação
+
+[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com)
+
+2. Selecionar em servers
+
+```https://casexpinvestimentos.herokuapp.com - heroku aplplication```
+
+3. Selecionar o campo Login
+
+4. Clique em Try it out
+
+5. Clique em Execute
+
+6. Copie a resposta do Token gerado
+
+4. Clique em authorize no botão direto superior e passe o valor da chave token gerada (sem aspas)
+
+5. Clique em Authorize e pronto, você ja pode testar e executar rotas protegidas, verificando respostas.
+
+
+## Diagrama de Entidade-Relacionamento
+
+Para verificar o relacionamento das tabelas utilize o DER a seguir:
+
+<img src="/src/investimentosder.png" alt="Relacionamento entre tabelas do banco de dados"/>
+
+## Melhorias possíveis
+
+Em uma aplicação do mundo real utilizaria uma api externa para consumir os dados sobre ações de forma dinâmica.
+Incluiria testes unitários com maior cobertura e também testes de integração.
+Acredito que o Typescript com um design de código orientado a objeto com princípios SOLID melhorariam a qualidade e manutenibilidade do código.
+O uso de uma ORM (Mapeamento objeto-relacional) também poderia otimizar o tempo de produção.
+
+Continuarei estudando para desenvolver essas habilidades.
+
+
+## Link do deploy da aplicação
+
+## Considerações Finais
+
+Obrigada por terem me acompanhado até aqui, gostei muito do processo de desenvolvimento do desafio e resultado final. Estou disponível para feedbacks sobre melhorias no projeto e também para parcerias em novos desenvolvimentos.
+
+Entre em contato comigo:
+
+### **Linkedin: [https://linkedin.com/in/julialanapatto](https://www.linkedin.com/in/julialanapatto/)**
+
+### **Github: [https://github.com/julialanapatto](https://github.com/julialanapatto)**
+
+### **Email: julialanapatto@gmail.com**
