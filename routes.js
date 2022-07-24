@@ -384,7 +384,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *                type: object
   *                $ref: '#/components/schemas/Investimentos'
   */
-   router.get('/investimentos', authenticateToken, investmentsController.getAllAssets)
+   router.get('/ativos/investimentos', authenticateToken, investmentsController.getAllAssets)
 
 // Swagger Transações compra de ativos
 /**
