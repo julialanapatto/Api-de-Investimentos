@@ -603,5 +603,4 @@ router.post('/investimentos/comprar', authenticateToken, validatePurchase, inves
   */
 router.post('/investimentos/vender',authenticateToken, validateSale, investmentsController.createSale);
 
-
 module.exports = router;
