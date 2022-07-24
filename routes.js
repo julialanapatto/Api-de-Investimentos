@@ -6,7 +6,6 @@ const clientController = require('./src/controllers/clientController')
 const investmentsController = require('./src/controllers/investmentsController');
 const loginController = require('./src/controllers/loginController');
 
-
 const { validateDeposit, validateWithdraw } = require('./src/middlewares/accountMiddleware')
 const { validatePurchase } = require('./src/middlewares/investmentsMiddleware');
 const { validateSale } = require('./src/middlewares/investmentsMiddleware')
