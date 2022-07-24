@@ -119,9 +119,10 @@ Os endpoints foram elaborados na arquitetura MSC com as camadas de Modelo, Servi
 
 Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticação e autorização do JWT pata controlar o acesso e oferecer mais segurança ao endpoint, o Swagger para documentar a API e explorar uma ferramenta que nunca havia utilizado, o deploy da API e realização de uma rota de testes unitários.
 
-## Documentação
+## Endpoints, retornos e documentação
 
-A documentação da API pode ser acessada pela url:
+Todos os endpoints e retornos estão descritas na documentação da API e pode ser acessada pela url:
+
 [Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com)
 
 ## Autenticação e autorização  [POST]
@@ -129,7 +130,7 @@ A documentação da API pode ser acessada pela url:
 Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
 Para isso é necessário seguir os seguintes passos na documentação da API.
 
-1. Abrir a documentação [Documentação Swagger](https://casexpinvestimentos.herokuapp.com)
+1. Abrir a documentação **[Documentação Swagger](https://casexpinvestimentos.herokuapp.com)**
 
 2. Selecionar em servers
 
@@ -168,7 +169,7 @@ Continuarei estudando para desenvolver essas habilidades.
 
 ## Link do deploy da aplicação
 
-[Link da aplicação](https://casexpinvestimentos.herokuapp.com/)
+**[Link da aplicação](https://casexpinvestimentos.herokuapp.com/)**
 
 ## Considerações Finais
 
