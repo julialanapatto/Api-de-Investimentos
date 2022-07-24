@@ -363,7 +363,8 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *            type: string
   *          qtdeAtivoMax:
   *            type:integer
-  *          qtdeInvestida: string
+  *          qtdeInvestida:
+  *            type: string
   *        example:
   *          codCliente: 3
   *          codAtivo: 2
@@ -388,7 +389,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *                type: object
   *                $ref: '#/components/schemas/Investimentos'
   */
-   router.get('/investimentos', authenticateToken, investmentsController.getAllAssets)
+   router.get('/investimentos', investmentsController.getAllAssets)
 
 // Swagger Transações compra de ativos
 /**
