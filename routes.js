@@ -38,6 +38,20 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *          email: juliaemail@gmail.com
   *          senha: $3b111$D4bHgG3ATHy8e53pPqY48a91Yo.day/HP47qpPAASq0JpHPp8P0Al.
   */
+/**
+ * @swagger
+  *  components:
+  *    schemas:
+  *      token:
+  *        type: object
+  *        required:
+  *          - token
+  *        properties:
+  *          token:
+  *            type: object
+  *        example:
+  *          "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJub21lIjoiUm9iZXJ0byIsInNvYnJlbm9tZSI6IlNvdXNhIiwiZW1haWwiOiJyb2JlcnRvc291c2FAZ21haWwuY29tIiwiaWF0IjoxNjU4NTIxNTYwLCJleHAiOjE2NTkxMjYzNjB9. 0tdUYr5wbV6Oo3jUGCmDGd-EO4ZYCGE1tH9d_-vjTEk"
+  */
  /**
   * @swagger
   *  /login:
@@ -54,7 +68,10 @@ const { authenticateToken } = require('./src/middlewares/loginMiddleware')
   *      responses:
   *        200:
   *          content:
-  *            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9. eyJub21lIjoiUm9iZXJ0byIsInNvYnJlbm9tZSI6IlNvdXNhIiwiZW1haWwiOiJyb2JlcnRvc291c2FAZ21haWwuY29tIiwiaWF0IjoxNjU4NTIxNTYwLCJleHAiOjE2NTkxMjYzNjB9. 0tdUYr5wbV6Oo3jUGCmDGd-EO4ZYCGE1tH9d_-vjTEk"
+  *            application/json:
+  *              schema:
+  *                type: object
+  *                $ref: '#/components/schemas/token'
   */
 router.post('/login', validateLogin, loginController.login)
 
@@ -78,7 +95,7 @@ router.post('/login', validateLogin, loginController.login)
   *          codCliente:
   *            type: integer
   *          saldo:
-  *            type: decimal(12,2)
+  *            type: string
   *        example:
   *          codCliente: 1
   *          saldo: 44084.51
@@ -268,7 +285,7 @@ router.get('/ativos/:codAtivo', authenticateToken, investmentsController.getByAs
  * @swagger
   *  components:
   *    schemas:
-  *      Ativos:
+  *      Clientes:
   *        type: object
   *        required:
   *          - codCliente
@@ -367,7 +384,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
 /**
  * @swagger
  *  tags:
- *    name: Extrato Venda
+ *    name: ExtratoVenda
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
@@ -400,7 +417,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   * @swagger
   *  /investimentos/vendas:
   *    get:
-  *      tags: [Extrato Venda]
+  *      tags: [ExtratoVenda]
   *      description: Endpoint que registra todas as vendas de ativos
   *      security:
   *        - bearerAuth: []
@@ -410,7 +427,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   *            application/json:
   *              schema:
   *                type: object
-  *                $ref: '#/components/schemas/ExtratoVendas'
+  *                $ref: '#/components/schemas/ExtratoVenda'
   */
 router.get('investimentos/vendas', authenticateToken, investmentsController.getAllSales)
 
