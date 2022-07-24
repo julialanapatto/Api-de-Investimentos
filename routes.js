@@ -329,6 +329,63 @@ router.get('/ativos/:codAtivo', authenticateToken, investmentsController.getByAs
   */
 router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.getByClient);
 
+// Swagger Transações de Investimentos
+/**
+ * @swagger
+ *  tags:
+ *    name: Investimentos
+ *    description: Endpoint de transações de investimentos
+ */
+/**
+ * @swagger
+  *  components:
+  *    schemas:
+  *      Investimentos:
+  *        type: object
+  *        required:
+  *          - codAtivo
+  *          - ativo
+  *          - tiker
+  *          - valor
+  *          - qtdeAtivoMax
+  *          - qtdeInvestida
+  *        properties:
+  *          codAtivo:
+  *            type: integer
+  *          ativo:
+  *            type: string
+  *          tiker:
+  *            type: string
+  *          valor:
+  *            type: decimal(12,2)
+  *          qtdeAtivoMax:
+  *            type:integer
+  *          qtdeInvestida: string
+  *        example:
+  *          codAtivo: 2
+  *          acao: "ELETROBRAS ON"
+  *          tiker: "ELET3"
+  *          valor: 44
+  *          qtdeAtivoMax: 10000
+  *          qtdeAtivo: 20000
+  *          qtdeInvestida: "59"
+  */
+  /**
+  * @swagger
+  *  /ativos/investimentos:
+  *    get:
+  *      tags: [Investimentos]
+  *      description: Endpoint permite verificar todas as informações sobre  os ativos incluindo informações da quantidade investida em cada ação
+  *      responses:
+  *        200:
+  *          content:
+  *            application/json:
+  *              schema:
+  *                type: object
+  *                $ref: '#/components/schemas/Investimentos'
+  */
+   router.get('/investimentos', investmentsController.getAllAssets)
+
 // Swagger Transações compra de ativos
 /**
  * @swagger
@@ -431,63 +488,6 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   */
 router.get('investimentos/vendas', authenticateToken, investmentsController.getAllSales)
 
-
-// Swagger Transações de Investimentos
-/**
- * @swagger
- *  tags:
- *    name: Investimentos
- *    description: Endpoint de transações de investimentos
- */
-/**
- * @swagger
-  *  components:
-  *    schemas:
-  *      Investimentos:
-  *        type: object
-  *        required:
-  *          - codAtivo
-  *          - ativo
-  *          - tiker
-  *          - valor
-  *          - qtdeAtivoMax
-  *          - qtdeInvestida
-  *        properties:
-  *          codAtivo:
-  *            type: integer
-  *          ativo:
-  *            type: string
-  *          tiker:
-  *            type: string
-  *          valor:
-  *            type: decimal(12,2)
-  *          qtdeAtivoMax:
-  *            type:integer
-  *          qtdeInvestida: string
-  *        example:
-  *          codAtivo: 2
-  *          acao: "ELETROBRAS ON"
-  *          tiker: "ELET3"
-  *          valor: 44
-  *          qtdeAtivoMax: 10000
-  *          qtdeAtivo: 20000
-  *          qtdeInvestida: "59"
-  */
-  /**
-  * @swagger
-  *  /ativos/investimentos:
-  *    get:
-  *      tags: [Investimentos]
-  *      description: Endpoint permite verificar todas as informações sobre  os ativos incluindo informações da quantidade investida em cada ação
-  *      responses:
-  *        200:
-  *          content:
-  *            application/json:
-  *              schema:
-  *                type: object
-  *                $ref: '#/components/schemas/Investimentos'
-  */
-router.get('/investimentos', investmentsController.getAllAssets)
 
 // Swagger Compras
 /**
