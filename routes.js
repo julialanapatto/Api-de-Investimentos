@@ -372,7 +372,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   */
   /**
   * @swagger
-  *  /ativos/investimentos:
+  *  /investimentos:
   *    get:
   *      tags: [Investimentos]
   *      description: Endpoint permite verificar todas as informações sobre  os ativos incluindo informações da quantidade investida em cada ação
@@ -384,7 +384,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *                type: object
   *                $ref: '#/components/schemas/Investimentos'
   */
-   router.get('/ativos/investimentos', authenticateToken, investmentsController.getAllAssets)
+   router.get('/investimentos', authenticateToken, investmentsController.getAllAssets)
 
 // Swagger Transações compra de ativos
 /**
@@ -441,14 +441,14 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
 /**
  * @swagger
  *  tags:
- *    name:  Extrato Vendaa
+ *    name: Extrato
  *    description: Endpoint que registra todas as vendas de ativos
  */
 /**
  * @swagger
   *  components:
   *    schemas:
-  *      ExtratoVenda:
+  *      Extrato:
   *        type: object
   *        required:
   *          - id
@@ -474,7 +474,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   * @swagger
   *  /investimentos/vendas:
   *    get:
-  *      tags: [Extrato Venda]
+  *      tags: [Extrato]
   *      description: Endpoint que registra todas as vendas de ativos
   *      security:
   *        - bearerAuth: []
@@ -484,7 +484,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   *            application/json:
   *              schema:
   *                type: object
-  *                $ref: '#/components/schemas/ExtratoVenda'
+  *                $ref: '#/components/schemas/Extrato'
   */
 router.get('investimentos/vendas', authenticateToken, investmentsController.getAllSales)
 
