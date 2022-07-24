@@ -18,7 +18,7 @@ if (!validate.test(email)) {
 };
 
 const jwtConfig = {
-  expiresIn: '7d',
+  expiresIn: '60m',
   algorithm: 'HS256',
 };
 

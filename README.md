@@ -111,7 +111,7 @@ Para isso é necessário seguir os seguintes passos na documentação da API.
 
 1. Abrir a documentação
 
-[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com)
+  [Documentação Swagger](https://casexpinvestimentos.herokuapp.com)
 
 2. Selecionar em servers
 
@@ -128,6 +128,8 @@ Para isso é necessário seguir os seguintes passos na documentação da API.
 4. Clique em authorize no botão direto superior e passe o valor da chave token gerada (sem aspas)
 
 5. Clique em Authorize e pronto, você ja pode testar e executar rotas protegidas, verificando respostas.
+
+6. O tempo de expiração do token é de 60min, após isso, será necessária a criação de um novo token.
 
 
 ## Diagrama de Entidade-Relacionamento
