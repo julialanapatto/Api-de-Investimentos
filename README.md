@@ -1,6 +1,26 @@
 # case-xp API
 Desafio do processo seletivo - turma xp
 
+## Índice
+
+* [Projeto desafio XPInc](#projeto-desafio-xpinc)
+* [Sobre](#Sobre)
+* [Tecnologias utilizadas](#tecnologias-utilizadas)
+* [Ferramentas utilizadas](#ferramentas-utilizadas)
+* [Métodos](#metodos)
+* [Respostas](#respostas)
+* [Instalação](#instalação)
+  * [Eslint](#eslint)
+  * [Testes](#testes)
+  * [Dependências](#dependências)
+* [Explicação sobre tomadas de decisão na abordagem do desafio](#explicação-sobre-tomadas-de-decisão-na-abordagem-do-desafio)
+* [Documentação](#documentação)
+* [Autenticação e autorização](#autenticação-e-autorização-post)
+* [Diagrama de Entidade-Relacionamento](#diagrama-de-entidade-relacionamento)
+* [Melhorias possíveis](#melhorias-possíveis)
+* [Link do deploy da aplicação](#link-do-deploy-da-aplicação)
+* [Considerações Finais](#considerações-finais)
+
 ## Projeto desafio XPInc
 
 Projeto desenvolvido para o processo seletivo da XPInc. Esta aplicação tem como objetivo gerenciar eventos, simulando um aplicativo de investimentos em ações e funcionalidades de conta digital. O propósito é gerenciar eventos como compra e vendas de ações, informações sobre investimentos e requisições para depósito e saque bancários.
@@ -109,9 +129,7 @@ A documentação da API pode ser acessada pela url:
 Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
 Para isso é necessário seguir os seguintes passos na documentação da API.
 
-1. Abrir a documentação
-
-  [Documentação Swagger](https://casexpinvestimentos.herokuapp.com)
+1. Abrir a documentação [Documentação Swagger](https://casexpinvestimentos.herokuapp.com)
 
 2. Selecionar em servers
 
@@ -149,6 +167,8 @@ Continuarei estudando para desenvolver essas habilidades.
 
 
 ## Link do deploy da aplicação
+
+[Link da aplicação](https://casexpinvestimentos.herokuapp.com/)
 
 ## Considerações Finais
 
