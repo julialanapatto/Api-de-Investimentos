@@ -98,7 +98,7 @@ router.post('/login', validateLogin, loginController.login)
   *            type: string
   *        example:
   *          codCliente: 1
-  *          saldo: 44084.51
+  *          saldo: "44084.51"
   */
 /**
   * @swagger
@@ -249,7 +249,7 @@ router.post('/conta/saque', authenticateToken, validateWithdraw, accountControll
   *        example:
   *          codAtivo: 1
   *          qtdeAtivo: 100
-  *          valor: 35
+  *          valor: "34.78"
   */
   /**
   * @swagger
@@ -299,12 +299,12 @@ router.get('/ativos/:codAtivo', authenticateToken, investmentsController.getByAs
   *            type: integer
   *          qtdeAtivo:
   *            type: string
-  *          valor: decimal(12,2)
+  *          valor: string
   *        example:
   *          codCliente: 1
   *          codAtivo: 1
   *          qtdeAtivo: "9"
-  *          valor: 35
+  *          valor: "8,38"
   */
   /**
   * @swagger
@@ -343,6 +343,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *      Investimentos:
   *        type: object
   *        required:
+  *          - codCliente
   *          - codAtivo
   *          - ativo
   *          - tiker
@@ -350,6 +351,8 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *          - qtdeAtivoMax
   *          - qtdeInvestida
   *        properties:
+  *          codCliente:
+  *            type: integer
   *          codAtivo:
   *            type: integer
   *          ativo:
@@ -357,11 +360,12 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *          tiker:
   *            type: string
   *          valor:
-  *            type: decimal(12,2)
+  *            type: string
   *          qtdeAtivoMax:
   *            type:integer
   *          qtdeInvestida: string
   *        example:
+  *          codCliente: 3
   *          codAtivo: 2
   *          acao: "ELETROBRAS ON"
   *          tiker: "ELET3"

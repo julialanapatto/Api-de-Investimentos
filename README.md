@@ -11,7 +11,6 @@ Desafio do processo seletivo - turma xp
 * [Respostas](#respostas)
 * [Instalação](#instalação)
   * [Eslint](#eslint)
-  * [Testes](#testes)
   * [Dependências](#dependências)
 * [Explicação sobre tomadas de decisão na abordagem do desafio](#explicação-sobre-tomadas-de-decisão-na-abordagem-do-desafio)
 * [Documentação](#documentação)
@@ -93,10 +92,6 @@ Requisições para a API seguem os padrões:
 
 (você também pode instalar o plugin do ESLint no VSCode)
 
-## Testes
-
-```npm test```
-
 ## Dependências
 
 Este projeto já vem com as dependências configuradas nos arquivos package.json no seguinte caminho:
@@ -117,7 +112,7 @@ O relacionamento entre as tabelas foi elaborado considerando a usabilidade do us
 
 Os endpoints foram elaborados na arquitetura MSC com as camadas de Modelo, Serviço, Controladores e as validações por Middlewares do Express.
 
-Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticação e autorização do JWT pata controlar o acesso e oferecer mais segurança ao endpoint, o Swagger para documentar a API e explorar uma ferramenta que nunca havia utilizado, o deploy da API e realização de uma rota de testes unitários.
+Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticação e autorização do JWT pata controlar o acesso e oferecer mais segurança ao endpoint, o Swagger para documentar a API e explorar uma ferramenta que nunca havia utilizado e o deploy da API.
 
 ## Endpoints, retornos e documentação
 
@@ -160,7 +155,7 @@ Para verificar o relacionamento das tabelas utilize o DER a seguir:
 ## Melhorias possíveis
 
 Em uma aplicação do mundo real utilizaria uma api externa para consumir os dados sobre ações de forma dinâmica.
-Incluiria testes unitários com maior cobertura e também testes de integração.
+Incluiria testes unitários e também testes de integração.
 Acredito que o Typescript com um design de código orientado a objeto com princípios SOLID melhorariam a qualidade e manutenibilidade do código.
 O uso de uma ORM (Mapeamento objeto-relacional) também poderia otimizar o tempo de produção.
 
