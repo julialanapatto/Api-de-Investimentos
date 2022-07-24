@@ -380,6 +380,8 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *    get:
   *      tags: [Investimentos]
   *      description: Endpoint permite verificar todas as informações sobre  os ativos incluindo informações da quantidade investida em cada ação
+  *      security:
+  *        - bearerAuth: []
   *      responses:
   *        200:
   *          content:
