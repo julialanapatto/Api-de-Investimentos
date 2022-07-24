@@ -118,7 +118,7 @@ Dos requisitos adicionais decidi implementar os JSON Web Tokens para autenticaç
 
 Todos os endpoints e retornos estão descritas na documentação da API e pode ser acessada pela url:
 
-**[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com)**
+**[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com/docs)**
 
 ## Autenticação e autorização  [POST]
 
