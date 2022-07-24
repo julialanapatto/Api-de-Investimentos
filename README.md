@@ -14,7 +14,7 @@ Desafio do processo seletivo - turma xp
   * [Dependências](#dependências)
 * [Explicação sobre tomadas de decisão na abordagem do desafio](#explicação-sobre-tomadas-de-decisão-na-abordagem-do-desafio)
 * [Documentação](#documentação)
-* [Autenticação e autorização](#autenticação-e-autorização-post)
+* [Autenticação e autorização](#autenticação-e-autorização)
 * [Diagrama de Entidade-Relacionamento](#diagrama-de-entidade-relacionamento)
 * [Melhorias possíveis](#melhorias-possíveis)
 * [Link do deploy da aplicação](#link-do-deploy-da-aplicação)
@@ -120,7 +120,7 @@ Todos os endpoints e retornos estão descritas na documentação da API e pode s
 
 **[Documentação SWAGGER case xp](https://casexpinvestimentos.herokuapp.com/docs)**
 
-## Autenticação e autorização  [POST]
+## Autenticação e autorização
 
 Algumas rotas estão autenticadas e para acessar a API é necessário simular o login com credenciais válidas para geração do token via JWT.
 Para isso é necessário seguir os seguintes passos na documentação da API.
