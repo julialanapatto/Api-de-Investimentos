@@ -106,7 +106,7 @@ Escolhi o Node.js com express devido a um maior domínio da linguagem JavaScript
 
 A escolha da utlização do MySQL sem o uso de ORM (Mapeamento objeto-relacional) foi para retomar conhecimentos e praticar querys em banco de dados com o MySQL puro.
 
-Com relação a API e informações sobre o banco de dados decidi criar uma API minúscula para simular informações e desenvolver algo novo, retornando informações que são fixas mas ao mesmo tempo me ajudando na compreensão dos retornos.
+Com relação a API e informações sobre o banco de dados decidi criar um banco para simular informações e desenvolver algo novo, retornando informações que são fixas mas ao mesmo tempo me ajudando na compreensão dos retornos.
 
 O relacionamento entre as tabelas foi elaborado considerando a usabilidade do usuário, informações necessárias para registro de informações e normativas
 
