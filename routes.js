@@ -435,7 +435,7 @@ router.get('/ativos/clientes/:codCliente', authenticateToken, clientController.g
   *                type: object
   *                $ref: '#/components/schemas/ExtratoCompra'
   */
-router.get('/investimentos/compras', authenticateToken, investmentsController.getAllPurchases)
+router.get('/investimentos/compras', investmentsController.getAllPurchases)
 
 // Swagger Transações compra de ativos
 /**
@@ -486,7 +486,7 @@ router.get('/investimentos/compras', authenticateToken, investmentsController.ge
   *                type: object
   *                $ref: '#/components/schemas/Extrato'
   */
-router.get('investimentos/vendas', authenticateToken, investmentsController.getAllSales)
+router.get('/investimentos/vendas', investmentsController.getAllSales)
 
 
 // Swagger Compras
