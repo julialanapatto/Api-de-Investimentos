@@ -1,9 +1,7 @@
-# case-xp API
-Desafio do processo seletivo - turma xp
+# API de investimentos
 
 ## Índice
 
-* [Projeto desafio XPInc](#projeto-desafio-xpinc)
 * [Sobre](#Sobre)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Ferramentas utilizadas](#ferramentas-utilizadas)
@@ -20,12 +18,10 @@ Desafio do processo seletivo - turma xp
 * [Link do deploy da aplicação](#link-do-deploy-da-aplicação)
 * [Considerações Finais](#considerações-finais)
 
-## Projeto desafio XPInc
-
-Projeto desenvolvido para o processo seletivo da XPInc. Esta aplicação tem como objetivo gerenciar eventos, simulando um aplicativo de investimentos em ações e funcionalidades de conta digital. O propósito é gerenciar eventos como compra e vendas de ações, informações sobre investimentos e requisições para depósito e saque bancários.
 
 ## Sobre
 
+Esta aplicação tem como objetivo gerenciar eventos, simulando um aplicativo de investimentos em ações e funcionalidades de conta digital. O propósito é gerenciar eventos como compra e vendas de ações, informações sobre investimentos e requisições para depósito e saque bancários.
 Esta aplicação foi desenvolvida em Node.js com Express, usando o MySQL para fazer um CRUD e seguindo os princípios do REST. Ela se conecta ao banco de dados através da Amazon Web Services (AWS).
 
 ## Tecnologias utilizadas
